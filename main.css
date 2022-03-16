@@ -109,3 +109,7 @@ body {
         color: black;
     }
 }
+
+.big-logo {
+    max-width: 512px;
+}
