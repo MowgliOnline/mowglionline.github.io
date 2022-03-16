@@ -1,0 +1,35 @@
+html {
+    --light: #fff3b0;
+    --accent: #9e2a2b;
+    --dark: #310507;
+    --dark-accent: #460b0b;
+}
+
+body {
+    background-color: var(--accent);
+    color: black;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container-sm {
+    background-color: var(--light);
+
+    padding: 7px 14px;
+    border-radius: 15px;
+}
+
+.dropdown-menu {
+    background-color: var(--accent);
+}
+
+@media(prefers-color-scheme: dark) {
+    body {
+        background-color: var(--dark-accent);
+        color: white;
+    }
+
+    .container-sm {
+        background-color: var(--dark);
+    }
+}
