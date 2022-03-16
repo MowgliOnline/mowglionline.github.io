@@ -1,5 +1,6 @@
 html {
     --light: #fff3b0;
+    --hint-grey: #DADADA;
     --accent: #9e2a2b;
     --dark: #310507;
     --dark-accent: #460b0b;
@@ -15,12 +16,52 @@ body {
 .container-sm {
     background-color: var(--light);
 
-    padding: 7px 14px;
+    padding: 11px 22px;
     border-radius: 15px;
 }
 
 .dropdown-menu {
-    background-color: var(--accent);
+    background-color: var(--light);
+}
+
+.dropdown-item {
+    transition: background-color 250ms;
+}
+.dropdown-item:hover {
+    background-color: var(--dark-accent);
+}
+
+.navbar-brand {
+    transition: color 250ms;
+}
+
+.navbar-toggler-icon {
+    color: black;
+}
+
+.navbar-mowgli-responsive-themed {
+    background-color: #FFFFFF00;
+    border-radius: 15px;
+
+    padding: 11px 22px;
+    margin-bottom: 11px;
+
+    transition: background-color 250ms;
+}
+
+.navbar-mowgli-responsive-themed:hover {
+    background-color: var(--light);
+}
+
+.navbar-mowgli-responsive-themed:hover .nav-link, .navbar-mowgli-responsive-themed:hover .dropdown-item, .navbar-mowgli-responsive-themed:hover .navbar-brand{
+    color: var(--dark);
+}
+
+.navbar-mowgli-responsive-themed .nav-link, .navbar-mowgli-responsive-themed .dropdown-item, .navbar-mowgli-responsive-themed .navbar-brand {
+    color: var(--hint-grey);
+}
+.navbar-mowgli-responsive-themed .nav-link:hover, .navbar-mowgli-responsive-themed .dropdown-item:hover, .navbar-mowgli-responsive-themed .navbar-brand:hover {
+    color: var(--accent);
 }
 
 @media(prefers-color-scheme: dark) {
@@ -31,5 +72,40 @@ body {
 
     .container-sm {
         background-color: var(--dark);
+    }
+
+
+
+
+
+
+    .dropdown-menu {
+        background-color: var(--dark);
+    }
+    
+    .dropdown-item:hover {
+        background-color: var(--hint-grey);
+    }
+    
+    .navbar-toggler-icon {
+        color: white;
+    }
+    
+    .navbar-mowgli-responsive-themed:hover {
+        background-color: var(--dark);
+    }
+    
+    .navbar-mowgli-responsive-themed:hover .nav-link, .navbar-mowgli-responsive-themed:hover .dropdown-item, .navbar-mowgli-responsive-themed:hover .navbar-brand{
+        color: var(--hint-grey);
+    }
+    
+    .navbar-mowgli-responsive-themed .nav-link, .navbar-mowgli-responsive-themed .dropdown-item, .navbar-mowgli-responsive-themed .navbar-brand {
+        color: var(--accent);
+    }
+    .navbar-mowgli-responsive-themed .nav-link:hover, .navbar-mowgli-responsive-themed .navbar-brand:hover {
+        color: var(--light);
+    }
+    .navbar-mowgli-responsive-themed .dropdown-item:hover {
+        color: black;
     }
 }
